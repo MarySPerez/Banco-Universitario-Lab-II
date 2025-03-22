@@ -5,5 +5,3 @@ export const CancelButton = () => {
     <div>CancelButton</div>
   )
 }
-//esto esta aqui
-

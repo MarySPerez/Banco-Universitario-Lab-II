@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './assets/icons/banco-universitario-website-favicon-color.png';
 import './App.css';
 
 function App() {
