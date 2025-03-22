@@ -1,0 +1,73 @@
+/* ObjetiveSection.css */
+
+
+.objectives-section {
+    padding: 4rem 1rem;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .objectives-container {
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .objective-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .objective-icon {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+  
+  .content-wrapper {
+    flex: 1;
+  }
+  
+  .objective-title {
+    color: #2980b9;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: left;
+    font-family: 'Montserrat_Alternative', sans-serif;
+}
+  
+  .objective-description {
+    color: #000000;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: 'Montserrat_Alternative', sans-serif;
+}
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .objective-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.5rem;
+    }
+  
+    .objective-icon {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .objective-title,
+    .objective-description {
+      text-align: center;
+    }
+  }
