@@ -1,89 +1,48 @@
-import styled from 'styled-components';
 import React from 'react';
+import './MisionVisionSection.css';
+import Vision from '../../assets/images/home/vision-mision.jpg';
 
-// Componentes Base
-const SectionContainer = styled.section`
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
-`;
-
-const SectionTitle = styled.h2`
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  color: #ffffff;
-  margin-bottom: 1.5rem;
-  text-wrap: balance;
-`;
-
-const ContentWrapper = styled.div`
-  display: grid;
-  gap: 3rem;
-  position: relative;
-
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-    &::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(180deg, #085F63 0%, #085F63 100%);
-      transform: translateX(-50%);
-    }
-  }
-`;
-
-const TextBlock = styled.div`
-  background: ${props => props.theme.cardBackground || '#f8f9fa'};
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px #085F63;
-  line-height: 1.6;
-  font-size: clamp(1rem, 1.1vw, 1.1rem);
-  color: #085F63;
-
-  @media (max-width: 767px) {
-    margin-bottom: 2rem;
-    &::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: #ffffff;
-      margin-top: 1.5rem;
-    }
-  }
-`;
-
-// Componente Principal
-const MisionVisionSection = () => {
+const MissionVision = () => {
   return (
-    <SectionContainer>
-      <SectionTitle>Nuestra Misión y Visión</SectionTitle>
-      <ContentWrapper>
-        <TextBlock>
-          <h3>Misión</h3>
-          <p>
+    <div className="bg-teal-900 text-white py-10 px-5">
+      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
+        <div className="text-center md:text-left">
+          <div className="flex items-center justify-center md:justify-start mb-4">
+            <h2 className="text-xl font-bold ml-2">Misión</h2>
+          </div>
+          <p className="text-sm">
             Somos una confiable institución financiera comprometida con los estudiantes universitarios,
             brindando soluciones financieras ágiles y eficientes. Nuestra misión es facilitar la gestión
             de sus recursos y contribuir al crecimiento económico y personal de nuestros clientes.
           </p>
-        </TextBlock>
-
-        <TextBlock>
-          <h3>Visión</h3>
-          <p>
+        </div>
+        <div className="text-center md:text-left">
+          <div className="flex items-center justify-center md:justify-start mb-4">
+            <h2 className="text-xl font-bold ml-2">Visión</h2>
+          </div>
+          <p className="text-sm">
             Queremos ser la principal opción financiera para estudiantes universitarios en el país.
             Deseamos ser reconocidos por nuestros servicios innovadores, la calidad de atención al cliente
             y nuestro compromiso con la educación y el desarrollo social.
           </p>
-        </TextBlock>
-      </ContentWrapper>
-    </SectionContainer>
+        </div>
+      </div>
+      <div>
+      <picture>
+          <source srcSet={Vision} type="image/jpg" /> 
+          <img
+            src={Vision}
+            alt="vision y mision"
+            className="w-full h-auto object-cover rounded-lg shadow-xl"
+            loading="lazy"
+            decoding="async"
+            width="1266"
+            height="608"
+          />
+        </picture>
+      </div>
+    </div>
   );
 };
 
-export default MisionVisionSection;
+export default MissionVision;
