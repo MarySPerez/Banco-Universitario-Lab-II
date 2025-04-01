@@ -1,10 +1,11 @@
-// SectionHero.jsx
 import Hero from '../../assets/images/home/hero-home.png';
 
 const HeroSection = () => {
   return (
     <section className="bg-white border-t-2 border-b-2 border-gray-300 mt-40 md:mt-[500px] px-4 md:px-8 lg:px-[130px] py-8 md:py-12 lg:py-[60px]">
+      {/* Seccion Principal */}
       <div className="max-w-7xl mx-auto">
+        {/* Imagen Principal */}
         <picture>
           <source srcSet={Hero} type="image/png" /> 
           <img
@@ -15,6 +16,7 @@ const HeroSection = () => {
             decoding="async"
             width="1266"
             height="608"
+            align= "center"
           />
         </picture>
       </div>
