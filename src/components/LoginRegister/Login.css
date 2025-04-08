@@ -1,0 +1,11 @@
+.login-page {
+    width: 100%;
+    justify-content: center;
+}
+
+.login-container {
+    display: flex;
+    width: 80%;
+    border-radius: 0.5rem;
+    margin: 1rem auto;
+}

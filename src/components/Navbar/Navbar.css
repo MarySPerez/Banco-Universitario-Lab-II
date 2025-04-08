@@ -1,0 +1,83 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 25px 1rem 2rem; /* Margen derecho de 9px en el padding general */
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: calc(100% - 25px - 2rem); /* Compensa el padding */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .menu-icon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+  }
+  
+  .main-logo {
+    height: 25px;
+    width: auto;
+  }
+  
+  .right-section {
+    display: flex;
+    gap: 25px; /* Espacio entre botones */
+    align-items: center;
+    position: relative;
+    right: -25px; /* Compensación adicional */
+  }
+  
+  .login-button,
+  .register-button {
+    padding: 0.4rem 1.8rem;
+    border-radius: 3px;
+    font-weight: 50;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    font-family: 'Montserrat_Alternative', sans-serif;
+  }
+  
+  .login-button {
+    background-color: transparent;
+    color: #085F63;
+    border-color: #085F63;
+  }
+  
+  .login-button:hover {
+    background-color: #adced179;
+  }
+  
+  .register-button {
+    background-color: #49BEB7;
+    color: white;
+    margin-right: 25px;
+    border-color: #085F63;
+  }
+  
+  .register-button:hover {
+    background-color: #2f9992;
+  }
+  
+  /* Asegurar alineación precisa */
+  @media (max-width: 768px) {
+    .header-container {
+      padding: 1rem 18px;
+      width: calc(100% - 25px);
+    }
+    
+    .register-button {
+      margin-right: 0;
+    }
+  }
