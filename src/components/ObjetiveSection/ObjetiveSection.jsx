@@ -1,3 +1,4 @@
+import "./ObjetiveSection.css";
 
 const ObjectivesSection = () => {
   return (

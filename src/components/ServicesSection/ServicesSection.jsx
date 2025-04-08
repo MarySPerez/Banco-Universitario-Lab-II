@@ -17,44 +17,33 @@ const services = [
 
 const ServicesSection = () => {
   return (
-
     <div className="seccion-principal">
-      {/* Sección Principal */}
-      <div classname="seccion-imagen-principal">
-        {/* Imagen Principal */}
+      <div className="seccion-imagen-principal"> {/* Corregido classname -> className */}
         <img
           src={Services}
           alt="servicios"
           className="imagen"
           loading="lazy"
           decoding="async"
-          width="600"
-          height="970"
-          align= "right"
-         />
+        />
       </div>
-      <div className="seccion-pincipal-servicios">
-        {/* Sección de Servicios */}
+      
+      <div className="seccion-principal-servicios">
         <div className="titulo-servicios">
-          {/* Titulo Principal */}
           <h2 className="tituloServicios">Nuestros Servicios</h2>
           <div className="seccion-servicios">
-            {/* Sección de botones */}
-            <div classname="servicio-1">
-              <button className="servicio1-button">Transferencias entre estudiantes sin comisión</button>
-            </div>
-            <div classname="servicio-2">
-              <button className="servicio2-button">Depósitos en efectivo</button>
-            </div>
-            <div classname="servicio-3">
-              <button className="servicio3-button">Retiros en efectivo</button>
-            </div>
-            <div classname="servicio-4">
-            <button className="servicio4-button">Cobro de becas estudiantiles</button>
-            </div>
-            <div classname="servicio-5">
-            <button className="servicio5-button">Pago de matrícula estudiantil</button>
-            </div>
+            {services.map((service, index) => (
+              <div key={index} className={`servicio-${index + 1}`}>
+                <button className="servicio-button">
+                  <img 
+                    src={service.icon} 
+                    alt={`Icono servicio ${index + 1}`} 
+                    className="icono-servicio"
+                  />
+                  <span>{service.text}</span>
+                </button>
+              </div>
+            ))}
           </div>
         </div>
       </div>

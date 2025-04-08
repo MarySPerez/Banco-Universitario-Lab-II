@@ -1,4 +1,113 @@
-/* styles.css */
-.bg-custom-color {
-    background-color: #085F63;
+/* MisionVisionSection.css */
+.seccion-principal {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.seccion-texto {
+  padding: 40px 20px;
+  background: #0f766e;
+  display: flex;
+  flex-direction: column; /* Cambiado de grid a column */
+  align-items: center;
+  gap: 25px;
+}
+
+.seccion-mision, .seccion-vision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%; /* Cambiado para mejor responsividad */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.titulo-mision, .titulo-vision {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.titulo-m, .titulo-v {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.descripcion-m, .descripcion-v {
+  padding-left: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px; /* Añadido para mejor lectura */
+  color: #ffffff;
+  text-align: justify;
+}
+
+/* Corrección de typo en .descripcion-vision */
+.descripcion-vision {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.seccion-imagen-principal {
+  background: #ffffff;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.seccion-imagen-principal img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Media Queries para Responsividad */
+@media (min-width: 768px) {
+  .seccion-principal {
+    padding: 60px 130px;
+    display: flex;
+    gap: 40px;
   }
+  
+  .seccion-texto {
+    padding: 60px 130px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .seccion-mision, .seccion-vision {
+    max-width: 400px;
+  }
+  
+  .titulo-mision, .titulo-vision {
+    font-size: 2rem;
+  }
+  
+  .titulo-m, .titulo-v {
+    font-size: 2rem;
+  }
+  
+  .descripcion-m, .descripcion-v {
+    font-size: 1.1rem;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion-principal {
+    padding: 40px 15px;
+  }
+  
+  .titulo-m, .titulo-v {
+    font-size: 1.5rem;
+  }
+  
+  .descripcion-m, .descripcion-v {
+    padding-left: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .seccion-imagen-principal {
+    padding: 0 10px;
+  }
+}

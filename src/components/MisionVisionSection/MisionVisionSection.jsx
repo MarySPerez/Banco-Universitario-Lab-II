@@ -4,34 +4,34 @@ import Vision from '../../assets/images/home/vision-mision.jpg';
 
 const MisionVision = () => {
   return (
-    <div className="bg-teal-900 text-white py-10 px-5">
+    <div className="seccion-principal">
       {/* Sección Principal */}
-      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
+      <div className="seccion-texto">
         {/* Sección de Texto */}
-        <div className="text-center md:text-left">
+        <div className="seccion-mision">
             {/* Seccion Misión */}
-          <div className="flex items-center justify-center md:justify-start mb-4">
+          <div className="titulo-mision">
             {/* Titulo Misión */}
-            <h2 className="text-xl font-bold ml-2">Misión</h2>
+            <h2 className="titulo-m">Misión</h2>
           </div>
-          <div classname= "text-center">
+          <div classname= "descripcion-mision">
             {/* Descripcion Mision */}
-            <p className="text-sm">
+            <p className="descripcion-m">
             Somos una confiable institución financiera comprometida con los estudiantes universitarios,
             brindando soluciones financieras ágiles y eficientes. Nuestra misión es facilitar la gestión
             de sus recursos y contribuir al crecimiento económico y personal de nuestros clientes.
             </p>
           </div>
         </div>
-        <div className="text-center md:text-left">
+        <div className="seccion-vision">
           {/* Seccion Visión */}
-          <div className="flex items-center justify-center md:justify-start mb-4">
+          <div className="titulo-vision">
             {/* Titulo Visión */}
-            <h2 className="text-xl font-bold ml-2">Visión</h2>
+            <h2 className="titulo-v">Visión</h2>
           </div>
-          <div classname= "text-center">
+          <div classname= "descripcion-vision">
             {/* Descripcion Vision */}
-            <p className="text-sm">
+            <p className="descripcion-v">
             Queremos ser la principal opción financiera para estudiantes universitarios en el país.
             Deseamos ser reconocidos por nuestros servicios innovadores, la calidad de atención al cliente
             y nuestro compromiso con la educación y el desarrollo social.
@@ -39,7 +39,7 @@ const MisionVision = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className= "seccion-imagen-principal">
         {/* Imagen Vision */}
           <img
             src={Vision}
@@ -47,7 +47,7 @@ const MisionVision = () => {
             className="w-full h-auto object-cover rounded-lg shadow-xl"
             loading="lazy"
             decoding="async"
-            width="1266"
+            width="997"
             height="608"
             align= "center"
           />

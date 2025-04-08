@@ -5,7 +5,7 @@
     background: #ffffff;
     border-top: 2px solid #e5e7eb;
     border-bottom: 2px solid #e5e7eb;
-    margin-top: 50px;
+    margin-top: 0px;
   }
   
   .objectives-container {
@@ -16,7 +16,7 @@
   .section-title {
     text-align: center;
     font-size: 2.4rem;
-    color: #1f2937;
+    color: #0f766e;
     margin-bottom: 40px;
     font-weight: 600;
     line-height: 1.3;
@@ -29,6 +29,7 @@
   }
   
   .objective-item {
+    text-align: justify;
     position: relative;
     padding-left: 30px;
     font-size: 1.1rem;
@@ -38,11 +39,11 @@
   
   .objective-item::before {
     content: "•";
-    color: #3b82f6;
+    color: #0f766e;
     font-size: 1.5rem;
     position: absolute;
     left: 0;
-    top: -2px;
+    top: 12px;
   }
   
   /* Responsive Design */

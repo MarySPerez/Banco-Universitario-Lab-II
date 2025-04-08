@@ -1,164 +1,126 @@
-.seccion-principal{
-    padding: 2rem; 
-    margin: auto;
-    width: 100%; 
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-
-  .seccion-imagen-principal{
+.seccion-principal {
+    padding: 60px 5%;
     display: flex;
-    flex-direction: column;
-    align-items: right;
-  }
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between; /* Cambiado a space-between */
+    align-items: flex-start; /* Alinea los items al inicio */
+}
 
-  .seccion-principal-servicios{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-  }
-  
-  .titulo-servicios{
-    font-size: 1.25rem;
+.seccion-imagen-principal {
+    flex: 0 1 auto; /* Permite que la imagen se ajuste naturalmente */
+    order: 2; /* Posiciona la imagen después del contenido */
+    max-width: 500px;
+    margin-left: auto; /* Empuja la imagen a la derecha */
+}
+
+.seccion-principal-servicios {
+    flex: 1 1 400px;
+    max-width: 600px;
+    order: 1; /* Asegura que el contenido venga primero */
+}
+
+/* Añade estas nuevas reglas */
+.imagen {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto; /* Alinea la imagen a la derecha */
+    display: block;
+}
+
+.titulo-servicios {
+    width: 100%;
+    text-align: left; /* Alinea el título a la izquierda */
+    margin-bottom: 2rem;
+    color: #0f766e;
+    text-align: center;
+}
+
+.seccion-servicios {
+    width: 100%;
+    max-width: 550px;
+}
+
+@media (max-width: 768px) {
+    .seccion-principal {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .seccion-imagen-principal {
+        order: -1; /* Opcional: imagen arriba en móviles */
+        margin: 0 auto;
+    }
+    
+    .seccion-principal-servicios {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Estilos unificados para todos los botones */
+.servicio-button {
+    background-color: #ffffff;
+    color: #4b5563;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
     font-weight: 600;
-  }
-
-  .tituloServicios {
-    font-size: 1.25rem;    /* text-xl */
-    line-height: 1.75rem;  /* (implícito en text-xl) */
-    font-weight: 600;      /* font-semibold */
-    color: #0f766e;        /* text-teal-700 */
-    margin-bottom: 0;      /* mb-0 */
-    text-align: center;    /* text-center */
-  }
-
-  .seccion-servicios{
+    font-size: 0.875rem;
+    width: 100%;
+    border: 2px solid #0f766e;
+    cursor: pointer;
+    transition: all 0.3s ease;
     display: flex;
-    flex-direction: column;
-    align-items: left;
-  }
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
 
-  .servicio-1{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-  }
+.servicio-button:hover {
+    background-color: #f0fdfa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
 
-  .servicio1-button {
-    background-color: #ffffff;         /* bg-teal-500 */
-    color: #000000;                       /* text-white */
-    padding: 0.5rem 1rem;              /* py-2 px-4 */
-    border-radius: 0.375rem;           /* rounded-md */
-    font-weight: 600;                  /* font-semibold */
-    font-size: 0.875rem;               /* text-sm */
-    width: 100%;                       /* w-full */
-    border: 2px solid #4b4b4b;                      /* reset predeterminado */
-    cursor: pointer;                   /* cursor tipo botón */
-    transition: all 0.2s;              /* suavizar transiciones */
-  }
+.servicio-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.3);
+}
 
-  .servicio1-button:focus {
-    outline: none;                     /* focus:outline-none */
-    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.5); /* focus:shadow-outline personalizado */
-  }
+.icono-servicio {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
 
-  .servicio-2{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-  }
+.servicio-button:hover .icono-servicio {
+    transform: scale(1.1);
+}
 
-  .servicio2-button:focus {
-    outline: none;                     /* focus:outline-none */
-    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.5); /* focus:shadow-outline personalizado */
-  }
+/* Media Queries para botones */
+@media (max-width: 768px) {
+    .servicio-button {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .icono-servicio {
+        width: 20px;
+        height: 20px;
+    }
+}
 
-  .servicio2-button {
-    background-color: #ffffff;         /* bg-teal-500 */
-    color: #000000;                       /* text-white */
-    padding: 0.5rem 1rem;              /* py-2 px-4 */
-    border-radius: 0.375rem;           /* rounded-md */
-    font-weight: 600;                  /* font-semibold */
-    font-size: 0.875rem;               /* text-sm */
-    width: 100%;                       /* w-full */
-    border: 2px solid #4b4b4b;                      /* reset predeterminado */
-    cursor: pointer;                   /* cursor tipo botón */
-    transition: all 0.2s;              /* suavizar transiciones */
-  }
-
-  .servicio2-button:focus {
-    outline: none;                     /* focus:outline-none */
-    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.5); /* focus:shadow-outline personalizado */
-  }
-
-  .servicio-3{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-  }
-
-  .servicio3-button {
-    background-color: #ffffff;         /* bg-teal-500 */
-    color: #000000;                       /* text-white */
-    padding: 0.5rem 1rem;              /* py-2 px-4 */
-    border-radius: 0.375rem;           /* rounded-md */
-    font-weight: 600;                  /* font-semibold */
-    font-size: 0.875rem;               /* text-sm */
-    width: 100%;                       /* w-full */
-    border: 2px solid #4b4b4b;                      /* reset predeterminado */
-    cursor: pointer;                   /* cursor tipo botón */
-    transition: all 0.2s;              /* suavizar transiciones */
-  } 
-
-  .servicio3-button:focus {
-    outline: none;                     /* focus:outline-none */
-    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.5); /* focus:shadow-outline personalizado */
-  }
-
-  .servicio-4{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-  }
-
-  .servicio4-button {
-    background-color: #ffffff;         /* bg-teal-500 */
-    color: #000000;                       /* text-white */
-    padding: 0.5rem 1rem;              /* py-2 px-4 */
-    border-radius: 0.375rem;           /* rounded-md */
-    font-weight: 600;                  /* font-semibold */
-    font-size: 0.875rem;               /* text-sm */
-    width: 100%;                       /* w-full */
-    border: 2px solid #4b4b4b;                      /* reset predeterminado */
-    cursor: pointer;                   /* cursor tipo botón */
-    transition: all 0.2s;              /* suavizar transiciones */
-  }
-
-  .servicio4-button:focus {
-    outline: none;                     /* focus:outline-none */
-    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.5); /* focus:shadow-outline personalizado */
-  }
-
-  .servicio-5{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-  }
-  
-  .servicio5-button {
-    background-color: #ffffff;         /* bg-teal-500 */
-    color: #000000;                       /* text-white */
-    padding: 0.5rem 1rem;              /* py-2 px-4 */
-    border-radius: 0.375rem;           /* rounded-md */
-    font-weight: 600;                  /* font-semibold */
-    font-size: 0.875rem;               /* text-sm */
-    width: 100%;                       /* w-full */
-    border: 2px solid #4b4b4b;                      /* reset predeterminado */
-    cursor: pointer;                   /* cursor tipo botón */
-    transition: all 0.2s;              /* suavizar transiciones */
-  }
-
-  .servicio5-button:focus {
-    outline: none;                     /* focus:outline-none */
-    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.5); /* focus:shadow-outline personalizado */
-  }
+@media (max-width: 480px) {
+    .servicio-button {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 0.75rem;
+    }
+    
+    .icono-servicio {
+        width: 24px;
+        height: 24px;
+    }
+}
